@@ -2,7 +2,7 @@
 
 . $(dirname $0)/config.sh
 
-rm /usr/local/etc/nginx/sites/$1.conf
+rm -f /usr/local/etc/nginx/sites/$1.conf
 cp $(dirname $0)/subdomain.conf /usr/local/etc/nginx/sites/$1.conf
 
 sed -i '' -e '/.*'$1'.*/d' /usr/local/etc/nginx/standard.conf
