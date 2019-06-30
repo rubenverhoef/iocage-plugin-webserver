@@ -1,6 +1,6 @@
 <?php
 return array(
-	'database_Location' => '/usr/local/organizr/',
-	'timezone' => 'Europe/Amsterdam',
-	'user_home' => '/usr/local/organizr/users/'
+	'dbLocation' => '/usr/local/organizr/',
+	'dbName' => 'Organizr.db',
+	'license' => 'personal'
 );
