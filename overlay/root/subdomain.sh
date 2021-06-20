@@ -11,6 +11,11 @@ sed -i '' -e 's/DOMAIN/'$DOMAIN'/g' /usr/local/etc/nginx/sites/$1.conf
 sed -i '' -e 's/SUB/'$1'/g' /usr/local/etc/nginx/sites/$1.conf
 sed -i '' -e 's/IP/'$2'/g' /usr/local/etc/nginx/sites/$1.conf
 sed -i '' -e 's/PORT/'$3'/g' /usr/local/etc/nginx/sites/$1.conf
+if [ $4 ]; then
+    sed -i '' -e 's/SCHEME/'$4'/g' /usr/local/etc/nginx/sites/$1.conf
+else
+    sed -i '' -e 's/SCHEME/http/g' /usr/local/etc/nginx/sites/$1.conf
+fi
 
 service nginx stop
 
